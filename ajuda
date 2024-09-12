@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu de Ajuda</title>
+    <style>
+        body {
+            background-color: #2E0036; /* Roxo escuro de fundo */
+            font-family: 'Arial', sans-serif;
+            color: white;
+        }
+
+        .menu {
+            background-color: #D1A653; /* Amarelo queimado suave */
+            width: 300px;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            margin: 50px auto;
+            color: #4B1B44; /* Roxo escuro para texto */
+            text-align: center;
+        }
+
+        .menu-item {
+            margin: 15px 0;
+            padding: 15px;
+            background-color: #6D2F6D; /* Roxo dos botões */
+            border-radius: 30px;
+            cursor: pointer;
+            color: white;
+            font-size: 18px;
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .submenu {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .submenu .menu-item {
+            background-color: #D1A653; /* Amarelo claro */
+            color: #4B1B44;
+        }
+
+        .menu-item:hover {
+            background-color: #582A58; /* Um tom mais escuro de roxo */
+        }
+
+        .menu-item a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .submenu .menu-item a {
+            color: #4B1B44; /* Links dentro das sub-opções em roxo escuro */
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .logo img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px; /* Bordas arredondadas para a imagem */
+        }
+
+        h2 {
+            color: #4B1B44;
+            font-size: 24px;
+            font-family: 'Arial', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <img src="https://static.wixstatic.com/media/2382c4_2529f2cc6a624d1394aed74a93ad06ef~mv2.png/v1/fit/w_2500,h_1330,al_c/2382c4_2529f2cc6a624d1394aed74a93ad06ef~mv2.png" alt="Logo">
+    </div>
+
+    <div class="menu">
+        <h2>Precisa de Ajuda?</h2>
+        <div class="menu-item" onclick="toggleSubmenu('mcta')">MCTA</div>
+        <div id="mcta" class="submenu">
+            <div class="menu-item"><a href="http://www.perfect-we.com/formacaomcta" target="_blank">Sobre a formação</a></div>
+            <div class="menu-item"><a href="http://www.perfect-we.com/formados" target="_blank">Formados/Depoimentos</a></div>
+            <div class="menu-item"><a href="http://www.perfect-we.com/profiss" target="_blank">Professores</a></div>
+        </div>
+        
+        <div class="menu-item" onclick="toggleSubmenu('cursos')">Cursos</div>
+        <div id="cursos" class="submenu">
+            <div class="menu-item"><a href="http://www.perfect-we.com/21-dias-de-conscientizacao" target="_blank">21 dias de Conscientização</a></div>
+            <div class="menu-item"><a href="http://www.perfect-we.com/transmutacao" target="_blank">Transmutação</a></div>
+        </div>
+        
+        <div class="menu-item" onclick="toggleSubmenu('mentor')">Mentorias</div>
+        <div id="mentor" class="submenu">
+            <div class="menu-item"><a href="http://www.perfect-we.com/mentoriagrupos" target="_blank">Grupo (Prosperidade)</a></div>
+        </div>
+        
+        <div class="menu-item" onclick="toggleSubmenu('retiros')">Retiros</div>
+        <div id="retiros" class="submenu">
+            <div class="menu-item"><a href="http://www.perfect-we.com/retiros" target="_blank">Vale do Paraíba/RJ</a></div>
+            <div class="menu-item"><a href="http://www.perfect-we.com/retiros" target="_blank">Belo Horizonte/MG</a></div>
+        </div>
+        
+        <div class="menu-item" onclick="toggleSubmenu('workshops')">Workshops</div>
+        <div id="workshops" class="submenu">
+            <div class="menu-item"><a href="http://www.perfect-we.com/workshop" target="_blank">Prosperidade / Porto</a></div>
+        </div>
+        
+        <div class="menu-item" onclick="toggleSubmenu('livros')">Livros</div>
+        <div id="livros" class="submenu">
+            <div class="menu-item"><a href="http://www.perfect-we.com/escolhas-crianca-interior" target="_blank">Escolhas da Criança Interior</a></div>
+            <div class="menu-item"><a href="http://www.perfect-we.com/manual-super-humano" target="_blank">Manual do Super Humano</a></div>
+        </div>
+        
+        <div class="menu-item" onclick="toggleSubmenu('atendimentos')">Atendimentos</div>
+        <div id="atendimentos" class="submenu">
+            <div class="menu-item"><a href="http://www.perfect-we.com/leitura-de-alma" target="_blank">Leitura de Alma</a></div>
+            <div class="menu-item"><a href="http://www.perfect-we.com/terapeutasmcta" target="_blank">Terapeuta MCTA</a></div>
+        </div>
+        
+        <div class="menu-item" onclick="toggleSubmenu('redes')">Redes Sociais</div>
+        <div id="redes" class="submenu">
+            <div class="menu-item"><a href="https://www.instagram.com/kleuren_canedo/" target="_blank">Instagram</a></div>
+            <div class="menu-item"><a href="https://www.youtube.com/@kleuren_canedo" target="_blank">YouTube</a></div>
+            <div class="menu-item"><a href="https://www.facebook.com/kleuren" target="_blank">Facebook</a></div>
+            <div class="menu-item"><a href="https://www.tiktok.com/@kleuren_canedo" target="_blank">TikTok</a></div>
+        </div>
+        
+        <div class="menu-item" onclick="toggleSubmenu('contato')">Contato</div>
+        <div id="contato" class="submenu">
+            <div class="menu-item"><a href="mailto:academy@perfect-we.com" target="_blank">E-mail</a></div>
+            <div class="menu-item"><a href="https://api.whatsapp.com/send?phone=5519961019777" target="_blank">WhatsApp</a></div>
+        </div>
+
+        <div class="menu-item"><a href="https://perfect-we.com" target="_blank">Website Perfect-We</a></div>
+    </div>
+
+    <script>
+        function toggleSubmenu(id) {
+            const submenu = document.getElementById(id);
+            submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
